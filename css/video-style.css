@@ -1,0 +1,506 @@
+:root { /*WHEN COPYING FOR NEW PAGES, ITS FROM HERE*/
+    /* Colours */
+    --clr-base-100: #F5F4ED;
+    --clr-lightgrey: hsl(270, 2%, 25%);
+    --clr-grey: hsl(0, 0%, 16%);
+    --clr-blue: hsl(194, 64%, 71%);
+    --clr-darkblue: hsl(192, 39%, 49%);
+    --clr-orange: #F15A24;;
+    /* --clr-darkorange: #BF692C; */
+/* Fonts*/
+    --ff-800: 'GeneralSans-Bold';
+    --ff-700: 'Impact';
+    --ff-600: 'GeneralSans-Medium';
+    --ff-400: 'GeneralSans-Light';
+    --fs-XL: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    --fs-300: .8rem;
+    --fs-200: .6rem;
+/* Miscellaneous */
+--b-rad: .5rem;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'GeneralSans-Light';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Light.woff2') format('woff2'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Light.woff') format('woff'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Light.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  @font-face {
+    font-family: 'Impact';
+    src: url('../media/font/Impact/ImpactLTStd.woff2') format('woff2'),
+        url('../media/font/Impact/ImpactLTStd.woff') format('woff'),
+        url('../media/font/Impact/ImpactLTStd.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-Medium';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Medium.woff2') format('woff2'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Medium.woff') format('woff'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Medium.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+@font-face {
+    font-family: 'GeneralSans-Bold';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Bold.woff2') format('woff2'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Bold.woff') format('woff'),
+         url('../media/font/GeneralSans_Complete/GeneralSans-Bold.ttf') format('truetype');
+         font-weight: 800;
+         font-display: swap;
+         font-style: normal;
+  }
+* {
+    margin: 0;
+    font-family: var(--ff-400);
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    background-color: var(--clr-base-100);
+}
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE HEADER SECTION */
+.container {
+    margin: 0 14rem;
+    max-width: 1800px;
+    color: var(--clr-grey);
+}
+@media (width<= 1800px) {
+    .container {
+        margin-left: 11rem;
+        margin-right: 11rem;
+    }
+}
+@media (width<= 1500px) {
+    .container {
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
+}
+@media (width<= 1300px) {
+    .container {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+}
+@media (width<= 1200px) {
+    .container {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+@media (width<= 1082px) {
+    .container {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+@media (width<= 1025px) {
+    .container {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
+@media (width<= 1000px) {
+    .container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+@media (width<= 900px) {
+    .container {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}
+header p {
+    font-family: var(--ff-800);
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+.logo p {
+    color: var(--clr-grey);
+    font-size: 2.5rem;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 6rem;  
+}
+.navbar ul li {
+    padding: 1rem;
+    position: relative;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: var(--clr-orange);
+    scale: 0 1;
+    transition: scale 250ms;
+}
+.nav-link:hover::after{
+    scale: 1 1;
+}
+.nav-link a {
+    color: var(--clr-grey);
+    transition: 250ms;
+}
+.nav-link a:hover {
+    color: black;
+}
+.hamburger {
+    display: none;
+ }
+ 
+ .hamburger.is-active .bar:nth-child(1) {
+     transform: rotate(-45deg) translate(-6px, 5px);
+     background-color: white;
+ }
+ .hamburger.is-active .bar:nth-child(2) {
+     opacity: 0;
+ }
+ .hamburger.is-active .bar:nth-child(3) {
+     transform: rotate(45deg) translate(-6px, -5px);
+     background-color: white;
+ }
+ .mobile-nav {
+     display: none;
+ }
+ .mobile-nav.is-active {
+     left: 0;
+ }
+ 
+ @media (width<=800px) {
+     .leave {
+         display: none;
+     }
+     .logo p {
+         font-size: 1.5rem;
+     }
+     .hamburger {
+         position: relative;
+         width: 25px;
+         cursor: pointer;
+         padding: 0;
+         margin: 0;
+         z-index: 97;
+         
+         appearance: none;
+         background: none;
+         outline: none;
+         border: none;
+     
+         display: grid;
+         gap: 5px;
+         /* mix-blend-mode: lighten; */
+         .bar {
+             width: 100%;
+             height: 3px;
+             background-color: black;
+             transition: 350ms;
+             
+         }
+     }
+     .mobile-nav {
+         display: grid;
+         align-items: end;
+         position: fixed;
+         top: 0;
+         left: 100%;
+         width: 100%;
+         min-height: 100vh;
+         z-index: 96;
+         background-color: var(--clr-orange);
+         transition: 350ms cubic-bezier(.72,.37,0,.75);
+         div {
+             margin: 2rem 1.5rem;
+         }
+         a {
+             display: block;
+             text-align: right;
+             color: white;
+             margin: 1.5rem auto 0;
+             .main-link {
+                 font-family: var(--ff-700);
+                 font-size: 3rem;
+             }
+             .sub-text {
+                 font-family: var(--ff-600);
+             }
+         }
+     }
+ }
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE HEADER SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE HERO SECTION */
+.hero-container {
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10rem;
+}
+.primary {
+    display: grid;
+    div {
+        overflow: hidden;
+    }
+    h1 {
+        font-family: var(--ff-700);
+        font-size: clamp(3rem, -0.5449rem + 15.7549vw, 12rem);
+        line-height: .85;
+        text-transform: uppercase;
+        animation: hero-load 1000ms cubic-bezier(.72,.37,0,.75);
+    }
+}
+.transparent {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--clr-orange);
+}
+.together {
+    display: flex;
+    justify-content: space-between;
+}
+.primary div:nth-child(1) {
+    display: flex;
+    justify-content: end;
+}
+.primary div:nth-child(5) {
+    display: flex;
+    color: var(--clr-orange);
+}
+@keyframes hero-load {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.heading {
+    font-size: var(--fs-XL);
+    margin-block: 5rem;
+    display: flex;
+    justify-content: end;
+    h1 {
+        font-family: var(--ff-700);
+    } 
+}
+.project-files {
+    margin-block: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 1rem; */
+}
+.project-year {
+    font-size: var(--fs-500);
+    font-family: var(--ff-800);
+}
+.project {
+    margin-bottom: 1rem;
+    display: grid;
+}
+.project:nth-child(even) {
+    align-items: end;
+    .project-content {
+        text-align: right;
+    }
+}
+.thumbnail > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.thumbnail {
+    display: grid;
+    align-items: end;
+    transition: 350ms;
+    position: relative;
+    overflow: hidden;
+    div {
+        z-index: 100;
+        color: white;
+        margin: 1rem;
+        p {
+            font-size: var(--fs-500);
+            opacity: 0;
+            transition: 350ms;
+        }
+    }
+}
+.thumb-img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: 350ms;
+    z-index: 1;
+    transform: scale(1);
+}
+.thumbnail::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 70%;
+    background-image: linear-gradient( transparent, rgba(0, 0, 0, 0.95));
+    z-index: 90;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: 350ms;
+}
+.thumbnail:hover {
+    div p {
+        opacity: 1;
+    }
+    .thumb-img { 
+        transform: scale(1.1);
+        translate: 5%;
+    }
+    &::after {
+        opacity: 1;
+    }    
+}
+.project-name {
+    font-size: var(--fs-XL);
+    font-family: var(--ff-700);
+}
+@media (width<= 800px) {
+    .project-files {
+        margin-block: 5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media (width<= 700px) {
+    .hero-container {
+        height: 70svh;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+
+    }
+}
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE FOOTER SECTION */
+footer {
+    background-color: var(--clr-grey);
+    color: white;
+    font-size: var(--fs-300);
+    padding: 6rem 10rem 0 10rem;
+}
+.footer-section {
+    background-color: var(--clr-grey);
+    display: grid;
+    gap: 2rem;
+    max-width: 1800px;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-first-half p {
+    font-size: var(--fs-500);
+    font-family: var(--ff-800);
+    width: 18ch;
+    margin: 1rem 0;
+}
+.footer-second-half {
+    display:flex;
+}
+.footer-second-half ul li{
+    margin: 1rem 0;
+}
+.footer-second-half ul a {
+    color: white;
+}
+.footer-second-half ul li p {
+    font-family: var(--ff-400);
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom h2 {
+    font-size: 6rem;
+    font-family: var(--ff-700);
+}
+b {
+    font-family: var(--ff-800);
+    color: var(--clr-orange);
+}
+.footer-logo {
+    color: var(--clr-blue);
+}
+@media (width<= 1500px) {
+    footer {
+        padding: 6rem 9rem;
+    }
+}
+@media (width<= 1300px) {
+    footer {
+        padding: 6rem 6rem;
+    }
+}
+@media (width<= 1200px) {
+    footer {
+        padding: 6rem 4rem;
+    }
+}
+@media (width<= 1025px) {
+    footer {
+        padding: 6rem 3rem;
+    }
+    .footer-bottom h2 {
+        font-size: 4rem;
+    }
+}
+@media (width<= 900px) {
+    footer {
+        padding: 3rem 2.5rem;
+    }
+}
+@media (width<= 750px) {
+    footer {
+        padding: 2rem 2rem;
+    }
+    .footer-bottom h2 {
+        font-size: 2.5rem;
+    }
+}
+@media (width<= 600px) {
+    footer {
+        padding: 2rem .5rem;
+    }
+    .none {
+        display: none;
+    }
+    .footer-top {
+        display: block;
+        /* justify-content: space-between; */
+    }
+}
+/* THIS CSS IF FOR THE INTERSECTION OBSERVER AND WILL BE REUSED FOR ALL PAGES */

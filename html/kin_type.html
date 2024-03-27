@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../media/assets/favicon_io/site.webmanifest">
+    <meta name="author" content="Jeremy Whervin">
+    <meta name="description" content="Jeremy Whervin portfolio website">
+    <meta name="keywords" content="Jeremy, Whervin, designer, developer, front-end developer, portfolio">
+    <link rel="stylesheet"href="../css/vid-project.css">
+    <link rel="stylesheet"href="../css/lenis.css">
+    <script src="../js/kinType.js" defer></script>
+    <title>Video Portfolio</title>
+</head>
+<body>
+    <div class="container">
+            <a href="video_portfolio.html" class="exit">
+                <svg viewBox="0 -960 960 960">
+                    <path d="m700-300-57-56 84-84H120v-80h607l-83-84 57-56 179 180-180 180Z"/>
+                </svg>
+            </a>
+        <main>
+            <div class="heading">
+                <h1>Kinetic Typography</h1>
+            </div>
+            <div class="video-container paused" data-volume-level="high">
+                <img class="thumbnail-img">
+                <div class="video-controls-container">
+                    <div class="timeline-container">
+                        <div class="timeline">
+                            <img class="preview-img">
+                            <div class="thumb-indicator"></div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="play-pause-btn">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                            </svg>
+                        </button>
+                        <div class="volume-container">
+                            <button class="mute-btn">
+                                <svg class="volume-high-icon" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                                  </svg>
+                                  <svg class="volume-low-icon" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5,9V15H9L14,20V4L9,9M18.5,12C18.5,10.23 17.5,8.71 16,7.97V16C17.5,15.29 18.5,13.76 18.5,12Z" />
+                                  </svg>
+                                  <svg class="volume-muted-icon" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z" />
+                                  </svg>
+                            </button>
+                            <input class="volume-slider" type="range" min="0" max="1" step="any" value="1">
+                        </div>
+                        <div class="duration-container">
+                            <div class="current-time">0:00</div>
+                            /
+                            <div class="total-time"></div>
+                        </div>
+                        <button class="mini-player-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-10-7h9v6h-9z"/>
+                              </svg>
+                        </button>
+                        <button class="full-screen-btn">
+                            <svg class="open" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                              </svg>
+                              <svg class="close" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- here os the code for the terminal. run this for the previews "ffmpeg -i media/videos/kin_type.mp4 -vf fps=1/10,scale=120:-1 media/assets/previewImgs_six/preview%d.jpg"
+                MAKE A NEW FOLDER FOR EVERY VIDEO!!!!!-->
+                <video src="../media/videos/kin_type.mp4"></video>
+            </div>
+            <div class="video-credits">
+                <p class="video-title">Expressive Kinetic Typography</p>
+                <p>Song: Dreams - Fleetwood Mac</p>
+                <p>Video editor: Jeremy Whervin</p>
+            </div>
+            <article>
+                <p>
+                    For my university course “Motion  Graphics and Time-Based Media”, we were tasked with creating a dynamic kinetic 
+                    typography animation inspired by the lyrics of a song. The assignment aimed to develop my skills in synchronising 
+                    text with audio, experimenting with expressive typography, and conveying emotions through motion.                
+                </p>
+            </article>
+            <div class="heading">
+                <h1>Project Overview</h1>
+            </div>
+            <section>
+                <!-- <div class="with-img">
+                    <p>
+                        This episode focused on the antics and fanfare leading up to the elections. The public had already been anticipating the announcement of general elections and discussing their feelings on social media. Politicians took this an opportunity to begin campaigning on social media taking advantage of a lot of the budding online trends in Jamaica.</p>
+                    <div>
+                        <img src="../media/images/_88573493_jamaica_holness_g.jpg" alt="">
+                    </div>          
+                </div> -->
+                <article class="full-details">
+                    <p>
+                        The song I chose for this project, 'Dreams' is a song depicting a woman going through the process of watching her lover 
+                        leave her for another woman. The first verse gives insight to how she feels about the situation, which isn't the typical 
+                        sadness one would come to expect. Rather she has accepted the situation as she knows her worth, this is a sort of “don't 
+                        give up your home for a hotel” situation. Despite the topic of the song, it doesn't feel like a 'sad' song because of the 
+                        warmth that the instruments and the vocals provide, which is appropriate considering the lyrics don't portray any direct 
+                        sadness, regret, guilt or anxiety. Because the song is originally from the 70s, I went with a warm 70s colour palette to fit the vibe.                    </p>
+                </article>
+            </section>
+            <div class="closing">
+                <a href="video_portfolio.html">
+                    <h1 class="word">Back to Projects</h1>
+                </a>
+            </div>
+        </main>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>        
+    // smooth scroll
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+    console.log(e)
+    })
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+
+</script>
+</body>
+</html>

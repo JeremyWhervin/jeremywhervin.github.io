@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Impact LT Std';
+    src: url('ImpactLTStd.eot');
+    src: local('Impact LT Std Roman'), local('ImpactLTStd'),
+        url('ImpactLTStd.eot?#iefix') format('embedded-opentype'),
+        url('ImpactLTStd.woff2') format('woff2'),
+        url('ImpactLTStd.woff') format('woff'),
+        url('ImpactLTStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,719 @@
+:root {
+    /*WHEN COPYING FOR NEW PAGES, ITS FROM HERE*/
+    /* Colors */
+    --clr-base-100: #F5F4ED;
+    --clr-lightgrey: hsl(270, 2%, 25%);
+    --clr-grey: hsl(0, 0%, 16%);
+    --clr-blue: hsl(194, 64%, 71%);
+    --clr-darkblue: hsl(192, 39%, 49%);
+    --clr-orange: #F15A24;
+    /* --clr-darkorange: #BF692C; */
+    /* Fonts*/
+    --ff-800: 'GeneralSans-Bold';
+    --ff-700: 'Impact';
+    --ff-600: 'GeneralSans-Medium';
+    --ff-400: 'GeneralSans-Light';
+    --fs-XL: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    --fs-300: .8rem;
+    --fs-200: .6rem;
+    /* Miscellaneous */
+    --b-rad: .5rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'GeneralSans-Light';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Light.woff2') format('woff2'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Light.woff') format('woff'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Impact';
+    src: url('../media/font/Impact/ImpactLTStd.woff2') format('woff2'),
+        url('../media/font/Impact/ImpactLTStd.woff') format('woff'),
+        url('../media/font/Impact/ImpactLTStd.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GeneralSans-Medium';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Medium.woff2') format('woff2'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Medium.woff') format('woff'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GeneralSans-Bold';
+    src: url('../media/font/GeneralSans_Complete/GeneralSans-Bold.woff2') format('woff2'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Bold.woff') format('woff'),
+        url('../media/font/GeneralSans_Complete/GeneralSans-Bold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    font-family: var(--ff-400);
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: var(--clr-base-100);
+}
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE HEADER SECTION */
+.container {
+    margin: 0 14rem;
+    max-width: 1800px;
+}
+
+@media (width<=1800px) {
+    .container {
+        margin-left: 11rem;
+        margin-right: 11rem;
+    }
+}
+
+@media (width<=1500px) {
+    .container {
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
+}
+
+@media (width<=1300px) {
+    .container {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+}
+
+@media (width<=1200px) {
+    .container {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+@media (width<=1082px) {
+    .container {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (width<=1025px) {
+    .container {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
+
+@media (width<=1000px) {
+    .container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (width<=900px) {
+    .container {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}
+
+header p {
+    font-family: var(--ff-800);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.logo p {
+    color: var(--clr-grey);
+    font-size: 2.5rem;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+}
+
+.navbar ul li {
+    padding: 1rem;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: var(--clr-orange);
+    scale: 0 1;
+    transition: scale 250ms;
+}
+
+.nav-link:hover::after {
+    scale: 1 1;
+}
+
+.nav-link a {
+    color: var(--clr-grey);
+    transition: 250ms;
+}
+
+.nav-link a:hover {
+    color: black;
+}
+.hamburger {
+   display: none;
+}
+
+.hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 5px);
+    background-color: white;
+}
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+    background-color: white;
+}
+.hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -5px);
+    background-color: white;
+}
+.mobile-nav {
+    display: none;
+}
+.mobile-nav.is-active {
+    left: 0;
+}
+
+@media (width<=800px) {
+    .leave {
+        display: none;
+    }
+    .logo p {
+        font-size: 1.5rem;
+    }
+    .hamburger {
+        position: relative;
+        width: 25px;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        z-index: 97;
+
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    
+        display: grid;
+        gap: 5px;
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: black;
+            transition: 350ms;
+            
+        }
+    }
+    .mobile-nav {
+        display: grid;
+        align-items: end;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 96;
+        background-color: var(--clr-orange);
+        transition: 350ms cubic-bezier(.72,.37,0,.75);
+        div {
+            margin: 5rem 1.5rem;
+        }
+        a {
+            display: block;
+            text-align: right;
+            color: white;
+            margin: 1.5rem auto 0;
+            .main-link {
+                font-family: var(--ff-700);
+                font-size: 3rem;
+            }
+            .sub-text {
+                font-family: var(--ff-600);
+            }
+        }
+    }
+}
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE HEADER SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE HERO SECTION */
+.hero-section {
+    margin: 0 0 10rem 0;
+    display: grid;
+    align-items: end;
+    height: 80svh;
+    color: var(--clr-grey);
+    text-transform: uppercase;
+    div {
+        overflow: hidden;
+    }
+    p {
+        font-size: clamp(3rem, 1.8184rem + 5.2516vw, 9rem);
+        line-height: .85;
+        font-family: var(--ff-700);
+        animation: hero-load 1000ms cubic-bezier(.72,.37,0,.75);
+    }
+    h1 {
+        font-size: clamp(6rem, 3.6368rem + 10.5033vw, 18rem);
+        line-height: .85;
+        animation: hero-load 1000ms cubic-bezier(.72,.37,0,.75);
+    }
+    span {
+        color: var(--clr-orange);
+        font-family: var(--ff-700);
+    }
+}
+
+@keyframes hero-load {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE HERO SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE PORTFOLIO SECTION */
+.portfolio-section {
+    margin: 7rem 0 10rem 0;
+}
+
+.portfolio-section h1,
+h2 {
+    font-family: var(--ff-700);
+}
+.title {
+    color: var(--clr-grey);
+    font-size: var(--fs-XL);
+    margin: 1rem 0 6rem 0;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.portfolio-card {
+    background-color: var(--clr-grey);
+    color: white;
+    border-radius: var(--b-rad);
+    padding: .75rem;
+    display: grid;
+    transition: 350ms;
+}
+.port-arrow {
+    display: flex;
+    justify-content: end;
+}
+.arrow-hole {
+    background-color: white;
+    border-radius: 50%;
+    padding: .5rem;
+    display: grid;
+    justify-content: center;
+    transition: 350ms;
+}
+.arrow {
+    width: 30px;
+    height: auto;
+    rotate: 45deg;
+    transition: 350ms;
+}
+
+.port-link {
+    padding: .75rem 0rem;
+    transition: 350ms;
+    display: flex;
+    justify-content: space-between;
+}
+
+.port-link p {
+    font-family: var(--ff-400);
+    font-size: var(--fs-500);
+    text-align: center;
+}
+
+.port-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1.5/1;
+    display: block;
+    border-radius: var(--b-rad);
+    margin: 1rem 0;
+    transition: 350ms;
+}
+
+.port-text {
+    margin-bottom: 1rem;
+}
+
+.port-text h1 {
+    font-family: var(--ff-700);
+    font-size: var(--fs-XL);
+    transition: 350ms;
+}
+
+.port-text p {
+    font-family: var(--ff-400);
+    margin-top: .5rem;
+    max-width: 30ch;
+}
+
+@media (width<=1018px) {
+    .port-text p {
+        display: none;
+    }
+
+    .port-link p {
+        font-size: var(--fs-400);
+    }
+}
+
+@media (width<=800px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .port-img {
+        display: none;
+    }
+
+    .port-link p {
+        font-size: var(--fs-300);
+    }
+
+    .arrow {
+        width: 15px;
+        height: auto;
+    }
+}
+
+.portfolio-card:hover {
+    background-color: var(--clr-lightgrey);
+}
+
+.portfolio-card:hover .arrow-hole {
+    scale: 1.3;
+}
+
+.portfolio-card:hover .port-text h1 {
+    color: var(--clr-orange);
+}
+
+.portfolio-card:hover .port-image {
+    filter: brightness(.5);
+}
+
+.portfolio-card:hover .arrow {
+    rotate: 90deg;
+}
+
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE PORTFOLIO SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
+.aboutme-section {
+    margin: 7rem 0 10rem 0;
+}
+
+.aboutme-section h1 {
+    font-family: var(--ff-700);
+}
+
+.aboutme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    color: var(--clr-grey);
+    margin-bottom: 8rem;
+    gap: 2rem;
+}
+.left-half {
+    display: grid;
+    justify-content: space-between;
+}
+
+.info-bit {
+    width: 50ch;
+    h3 {
+        font-family: var(--ff-700);
+        font-size: var(--fs-XL);
+    }
+    p {
+        font-family: var(--ff-600);
+    }
+}
+.part-one {
+    position: relative;
+    top: 500px;
+}
+.part-two {
+    position: relative;
+    top: 300px;
+}
+.part-three {
+    position: relative;
+    top: 200px;
+}
+.abt-img {
+    background-image: url('../media/images/wedding-BW.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    height: 100vh;
+    background-position: right;
+    background-attachment: fixed;
+    position: relative;
+    p {
+        content: 'test';
+        font-size: 4rem;
+        font-family: var(--ff-700);
+        position: absolute;
+        top: 400px;
+        left: -5%;
+    }
+}
+
+.about-titles {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+.about-text {
+    font-family: var(--ff-700);
+    font-size: clamp(3rem, 0.8731rem + 9.453vw, 8.4rem);
+    letter-spacing: -.01em;
+    line-height: 100%;
+    margin: 0;
+    width: 100%;
+    color: rgba(126, 126, 126, 0.995);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(.1, .5, .5, 1) 0.5s;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--clr-grey);
+    cursor: default;
+}
+
+.span {
+    font-family: var(--ff-700);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-orange);
+    color: #0D0D0D;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition: all cubic-bezier(.1, .5, .5, 1) 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text:hover>span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.fade {
+    color: rgba(245, 245, 245, 0.459);
+}
+
+.hidden-text {
+    display: none;
+}
+
+@media (width<=800px) {
+    .aboutme-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .left-half {
+        gap: 6rem;
+    }
+    .right-half {
+        display: none;
+    }
+    .info-bit {
+        width: auto;
+    }
+}
+
+/* THIS IS THE END OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
+
+/* THIS IS THE START OF THE CSS FOR THE STYLING OF THE FOOTER SECTION */
+footer {
+    background-color: var(--clr-grey);
+    color: white;
+    font-size: var(--fs-300);
+    padding: 6rem 10rem 0 10rem;
+}
+
+.footer-section {
+    background-color: var(--clr-grey);
+    display: grid;
+    gap: 2rem;
+    max-width: 1800px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-first-half p {
+    font-size: var(--fs-500);
+    font-family: var(--ff-800);
+    width: 18ch;
+    margin: 1rem 0;
+}
+
+.footer-second-half {
+    display: flex;
+}
+
+.footer-second-half ul li {
+    margin: 1rem 0;
+}
+
+.footer-second-half ul a {
+    color: white;
+}
+
+.footer-second-half ul li p {
+    font-family: var(--ff-400);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom h2 {
+    font-size: 6rem;
+    font-family: var(--ff-700);
+}
+
+b {
+    font-family: var(--ff-800);
+    color: var(--clr-orange);
+}
+
+.footer-logo {
+    color: var(--clr-blue);
+}
+
+@media (width<=1500px) {
+    footer {
+        padding: 6rem 9rem;
+    }
+}
+
+@media (width<=1300px) {
+    footer {
+        padding: 6rem 6rem;
+    }
+}
+
+@media (width<=1200px) {
+    footer {
+        padding: 6rem 4rem;
+    }
+}
+
+@media (width<=1025px) {
+    footer {
+        padding: 6rem 3rem;
+    }
+
+    .footer-bottom h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (width<=900px) {
+    footer {
+        padding: 3rem 2.5rem;
+    }
+}
+
+@media (width<=750px) {
+    footer {
+        padding: 2rem 2rem;
+    }
+
+    .footer-bottom h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (width<=600px) {
+    footer {
+        padding: 2rem .5rem;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .footer-top {
+        display: block;
+        /* justify-content: space-between; */
+    }
+}
+
+
