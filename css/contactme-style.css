@@ -229,7 +229,7 @@ header p {
          background-color: var(--clr-orange);
          transition: 350ms cubic-bezier(.72,.37,0,.75);
          div {
-             margin: 2rem 1.5rem;
+             margin: 5rem 1.5rem;
          }
          a {
              display: block;
@@ -272,6 +272,11 @@ header p {
             color: var(--clr-orange);
         }
     }   
+}
+@media (width<=800px) {
+    .big-text div {
+            overflow: visible;
+        }
 }
 .bottom-page {
     display: grid;

@@ -305,6 +305,12 @@ header p {
     }
 }
 
+@media (width<=800px) {
+    .hero-section div {
+            overflow: visible;
+        }
+}
+
 @keyframes hero-load {
     0% {
         transform: translateY(-100%);

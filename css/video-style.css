@@ -233,7 +233,7 @@ header p {
          background-color: var(--clr-orange);
          transition: 350ms cubic-bezier(.72,.37,0,.75);
          div {
-             margin: 2rem 1.5rem;
+             margin: 5rem 1.5rem;
          }
          a {
              display: block;
@@ -288,6 +288,11 @@ header p {
 .primary div:nth-child(5) {
     display: flex;
     color: var(--clr-orange);
+}
+@media (width<=800px) {
+    .primary div {
+            overflow: visible;
+        }
 }
 @keyframes hero-load {
     0% {
