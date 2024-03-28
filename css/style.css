@@ -504,6 +504,9 @@ h2 {
     position: relative;
     top: 200px;
 }
+.toggle-on {
+    display: none;
+}
 @media (width<=800px) {
     .toggle-off {
         display: none;
