@@ -135,7 +135,7 @@
                     </div>
                     <div class="aboutme-grid">
                         <div class="left-half">
-                            <div class="info-bit part-one">
+                            <div class="info-bit part-one toggle-off">
                                 <h3>01.</h3>
                                 <h3>Introduction</h3>
                                 <p>Artist that fell in love with design and development. 
@@ -144,7 +144,7 @@
                                     looking for a developer dedicated providing the maximum value to 
                                     your company, team or project, then I'm your guy.</p>
                             </div>
-                            <div class="info-bit part-two">
+                            <div class="info-bit part-two toggle-off">
                                 <h3>02.</h3>
                                 <h3>Education</h3>
                                 <div>
@@ -156,7 +156,36 @@
                                         graphic design, branding, etc...</p>
                                 </div>
                             </div>
-                            <div class="info-bit part-three">
+                            <div class="info-bit part-three toggle-off">
+                                <h3>03.</h3>
+                                <h3>Location</h3>
+                                <p>I currently live in Kingston Jamaica, 
+                                    but I work with partners globally. 
+                                    You're welcome to reach out to me 
+                                    no matter where you are.</p>
+                            </div>
+                            <div class="info-bit toggle-on">
+                                <h3>01.</h3>
+                                <h3>Introduction</h3>
+                                <p>Artist that fell in love with design and development. 
+                                    I focus on front-end web development, but I also  have
+                                    a passion for video editing and graphic design. If you're 
+                                    looking for a developer dedicated providing the maximum value to 
+                                    your company, team or project, then I'm your guy.</p>
+                            </div>
+                            <div class="info-bit toggle-on">
+                                <h3>02.</h3>
+                                <h3>Education</h3>
+                                <div>
+                                    <p>University of the West Indies</p>
+                                    <p>2021 - 2024</p>
+                                    <p>B.A. in Digital Media Production</p>
+                                    <p>Web development, 
+                                        web management, web design, 
+                                        graphic design, branding, etc...</p>
+                                </div>
+                            </div>
+                            <div class="info-bit toggle-on">
                                 <h3>03.</h3>
                                 <h3>Location</h3>
                                 <p>I currently live in Kingston Jamaica, 
@@ -249,14 +278,13 @@
         <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
         <!-- GSAP AND SMOOTH SCROLL RIGHT HERE -->
         <script>    
-            
+
             let tl = gsap.timeline({
                 
                 scrollTrigger: {
                     trigger: '.part-one',
                     trigger: '.part-two',
                     trigger: '.part-three',
-                    // trigger: '.part-four',
                     start: '-300% bottom',
                     end: '-100% top',
                     scrub: true,
@@ -273,9 +301,6 @@
             tl.to('.part-three', {
                 y: -200
             });
-            // tl.to('.part-four', {
-            //     y: -100
-            // });
             
             
             // smooth scroll
@@ -292,7 +317,6 @@
             })
 
             gsap.ticker.lagSmoothing(0)
-
         </script>
 </body>
 </html>

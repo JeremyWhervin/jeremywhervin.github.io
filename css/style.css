@@ -504,6 +504,14 @@ h2 {
     position: relative;
     top: 200px;
 }
+@media (width<=800px) {
+    .toggle-off {
+        display: none;
+    }
+    .toggle-on {
+        display: block;
+    }
+}
 .abt-img {
     background-image: url('../media/images/wedding-BW.webp');
     background-repeat: no-repeat;
