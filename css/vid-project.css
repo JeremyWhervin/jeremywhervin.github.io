@@ -443,3 +443,9 @@ video {
 .video-container.scrubbing .thumbnail-img {
     display: block;
 }
+@media(width <= 800px) {
+    .video-container {
+        width: 100%;
+        max-width: 1000px;
+    }
+}
