@@ -322,7 +322,7 @@ header p {
 }
 .project-year {
     font-size: var(--fs-500);
-    font-family: var(--ff-800);
+    font-family: var(--ff-600);
 }
 .project {
     margin-bottom: 1rem;
@@ -397,6 +397,10 @@ header p {
         margin-block: 5rem;
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .project-year {
+        font-size: var(--fs-400);
+        font-family: var(--ff-600);
     }
 }
 @media (width<= 700px) {
