@@ -517,7 +517,7 @@ header p {
 @media (width<= 800px) {
     .modal {
         max-width: 85%;
-        height: 90%;
+        height: fit-content;
     }
     .modal-flex {
         display: grid;
@@ -531,7 +531,11 @@ header p {
     .modal-details {
         p {
             width: auto;
+            font-size: var(--fs-300);
         }
+    }
+    .modal-nav {
+        justify-content: space-between;
     }
 }
 .folio-img {
