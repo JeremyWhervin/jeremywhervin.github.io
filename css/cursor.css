@@ -9,3 +9,8 @@
     pointer-events: none;
     z-index: 99999999;
   }
+  @media (width<=800px) {
+    .circle {
+        display: none;
+    }
+}
