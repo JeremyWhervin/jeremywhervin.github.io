@@ -522,6 +522,7 @@ h2 {
     min-width: 100%;
     height: 100vh;
     background-position: right;
+    border-radius: var(--b-rad);
     /* background-attachment: fixed; */
     position: relative;
     p {
