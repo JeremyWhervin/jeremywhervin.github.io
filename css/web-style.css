@@ -538,27 +538,41 @@ header p {
         justify-content: space-between;
     }
 }
-.folio-img {
+.modal-img {
+    border-radius: var(--b-rad);
+}
+.node-img, .api-img, .jtc-img, .react-img, .atty-img {
+    background-image: url(../media/images/elementor-placeholder-image.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* .node-img {
     background-image: url(../media/images/home-port-page.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.video-img {
+.api-img {
     background-image: url(../media/images/video-code.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10%;
 }
-.uwi-img {
+.jtc-img {
     background-image: url(../media/images/new-landing.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.nat-img {
+.react-img {
     background-image: url(../media/images/nla-full.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
+.atty-img {
+    background-image: url(../media/images/nla-full.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
 /* THIS IS THE END OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
 
 /* THIS IS THE START OF THE CSS FOR THE STYLING OF THE FOOTER SECTION */
