@@ -552,6 +552,11 @@ header p {
     background-repeat: no-repeat;
     background-position: 60%;
 }
+.react-img {
+    background-image: url(../media/images/supa-drive.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* .node-img {
     background-image: url(../media/images/home-port-page.webp);
     background-size: cover;
@@ -562,11 +567,6 @@ header p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10%;
-}
-.react-img {
-    background-image: url(../media/images/nla-full.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .atty-img {
     background-image: url(../media/images/nla-full.webp);
