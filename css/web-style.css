@@ -557,17 +557,18 @@ header p {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.api-img {
+    background-image: url(../media/images/second-test.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
 /* .node-img {
     background-image: url(../media/images/home-port-page.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.api-img {
-    background-image: url(../media/images/video-code.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 10%;
-}
+
 .atty-img {
     background-image: url(../media/images/nla-full.webp);
     background-size: cover;
