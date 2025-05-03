@@ -563,17 +563,18 @@ header p {
     background-repeat: no-repeat;
     background-position: 50%;
 }
-/* .node-img {
-    background-image: url(../media/images/home-port-page.webp);
+.node-img {
+    background-image: url(../media/images/printed.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    /* background-position: 50%; */
 }
-
 .atty-img {
-    background-image: url(../media/images/nla-full.webp);
+    background-image: url(../media/images/Untitled-1.png);
     background-size: cover;
     background-repeat: no-repeat;
-} */
+    background-position: 50%;
+}
 
 /* THIS IS THE END OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
 
