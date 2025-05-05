@@ -459,6 +459,9 @@ header p {
 }
 .modal-details {
     max-width: 65ch;
+    p {
+        text-wrap: pretty;
+    }
 }
 .tidbits {
     display: flex;
@@ -575,6 +578,7 @@ header p {
     background-repeat: no-repeat;
     background-position: 50%;
 }
+
 
 /* THIS IS THE END OF THE CSS FOR THE STYLING OF THE ABOUT ME SECTION */
 

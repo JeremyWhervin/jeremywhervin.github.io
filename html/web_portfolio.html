@@ -178,23 +178,26 @@
                     <div class="modal-desc">
                         <h2>CodePrinter</h2>
                         <div class="tidbits">
-                            <p>html</p>
-                            <p>css</p>
-                            <p>javascript</p>
-                            <p>GSAP</p>
-                            <p>lenis</p>
+                            <p>react</p>
+                            <p>css</p> 
                         </div>
                         <div class="modal-details">
                             <p>
-                                This very website that you're viewing right now. My portfolio website that I use to house my projects in web development and in video
-                                editing. The website was written with plain HTML and CSS for structure and styling with some javascript to facilitate interactivity
-                                and the construction of my own video player to use on the site when viewing my video projects, and that is listed as its own project 
-                                on this page. I also used the GSAP javascript animation library to create neat little additions like page transitions and scroll based
-                                animations.
+                                This application offers a seamless, real-time coding experience entirely in the browser. Built with React 
+                                and powered by CodeMirror, it features separate editor panes for HTML, CSS, and JavaScript. As users type, 
+                                the code is instantly compiled and rendered in a live preview pane, mimicking a CodePen-like workflow. 
+                                Includes: Real-Time Preview with instant feedback while writing HTML, CSS, and JS , PDF export in one-click 
+                                you may export all typed code into a formatted PDF, making it easy to save or share code snippets privately. Ideal for quick prototyping or safeguarding personal snippets without relying on cloud storage or external platforms.
+                            </p>
+                            <p>
+                                This project combines front-end state management, live rendering via <code>iframe</code>, and integration of 
+                                CodeMirror for syntax highlighting and editor customization. Implementing PDF generation required 
+                                dynamically bundling and formatting user input while maintaining layout integrity.
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <a href="https://github.com/JeremyWhervin/jeremywhervin.github.io"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="https://github.com/JeremyWhervin/code-printer"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="#"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
@@ -216,24 +219,31 @@
                     <div class="modal-desc">
                         <h2>Supabase Locker</h2>
                         <div class="tidbits">
-                            <p>html</p>
+                            <p>React</p>
                             <p>css</p>
-                            <p>javascript</p>
+                            <p>SQL</p>
+                            <p>supabase</p>
                         </div>
                         <div class="modal-details">
                             <p>
-                                This project began as an assignment for a digital marketing class for my undergraduate degree. We were tasked with 
-                                redesigning the landing page for a course of our choice offered by the university. I chose to do the landing page 
-                                for the Software Engineering programme. I built the landing page with plain HTML, CSS and Javascript, and mainly 
-                                focused on changing the information architecture to make valuable information that the university makes difficult 
-                                to find more accessible. I used css and javascript animations to provide a more engaging experience for the students, 
-                                to stand out from the typical pages provided by the university and allow them to peek at the possibilities that 
-                                the degree provides.
+                                This project is a full-stack cloud storage solution that allows users to securely log in, manage their 
+                                own storage space, and upload files all in a personalized environment. Includes features like: authentication 
+                                of user accounts with secure login via Supabase Auth, user folder creation. Create personal folders 
+                                limited to each authenticated user, user file uploads within folders for organisation, sorting by file 
+                                type based on the allowed file formats.
+                            </p>
+                            <p>
+                                This application required integrating Supabase's authentication, database, and storage APIs while 
+                                managing state and user sessions on the frontend. It involved building user-specific access control, 
+                                setting up database policies to enforce security, and designing a responsive UI for file interactions.
+                            </p>
+                            <p>This is built with the free version of Supabase. So only 50 total MB of data is allowed. IF you decide to 
+                                upload something, please make it as small as possible. :)
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <a href="#"><p>Source code &lt;/&gt;</p></a>
-                            <a href="#"><p>View live site</p></a>
+                            <a target="_blank" href="https://github.com/JeremyWhervin/i-h8-google-drive"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="#"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
@@ -336,23 +346,26 @@
                             <p>html</p>
                             <p>css</p>
                             <p>javascript</p>
+                            <p>json</p>
                         </div>
                         <div class="modal-details">
                             <p>
-                                This project was the final, end-of-semester assignment for the collaboration between my classes “Web Management” 
-                                and “Usability and the Online User Experience”. We were tasked with locating a real client with a web presence 
-                                and improving that  presence via their website and/or social media, as well as the user experience for their customers. 
-                                For my client I went with the governmental body National Land Agency and primarily focused on their website. I 
-                                conducted research and collected data with surveys, interviews with the client and users, conducted user experiments, 
-                                and reviewed their analytics, all with the intention to locate the pain points that the users are experiencing. 
-                                Recognizing that the main issue that users were experiencing was finding information and accessing their services, 
-                                I went ahead with my redesign for NLA's website as well as some of their services like document tracking and title searching.
+                                This interactive web map visualizes homicide statistics across Jamaica, broken down by parish and year 
+                                from 2020 to 2024. Using MapLibre GL JS for smooth, open-source mapping, the site renders a detailed map 
+                                of the island where users can explore crime trends through simple, intuitive interactions. Includes: 
+                                interactive hover tooltips to hover over each parish to instantly view yearly homicide data, year-by-year 
+                                breakdown, accurate, local data based on official figures provided by STATIN (Statistical Institute of 
+                                Jamaica).
+                            </p>
+                            <p>
+                                The project required sourcing and formatting official crime data, converting geographic shapefiles into 
+                                a usable GeoJSON format, and styling map layers to display information clearly. Building with MapLibre 
+                                involved customizing tooltips, hover states, and responsive map behavior. 
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <a href="#"><p>Source code &lt;/&gt;</p></a>
-                            <a href="#"><p>View live site</p></a>
-                            <a href="#"><p>Research document</p></a>
+                            <a target="_blank" href="https://github.com/JeremyWhervin/crime-map"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="#"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
