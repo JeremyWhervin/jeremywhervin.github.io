@@ -185,19 +185,15 @@
                             <p>
                                 This application offers a seamless, real-time coding experience entirely in the browser. Built with React 
                                 and powered by CodeMirror, it features separate editor panes for HTML, CSS, and JavaScript. As users type, 
-                                the code is instantly compiled and rendered in a live preview pane, mimicking a CodePen-like workflow. 
-                                Includes: Real-Time Preview with instant feedback while writing HTML, CSS, and JS , PDF export in one-click 
-                                you may export all typed code into a formatted PDF, making it easy to save or share code snippets privately. Ideal for quick prototyping or safeguarding personal snippets without relying on cloud storage or external platforms.
-                            </p>
-                            <p>
-                                This project combines front-end state management, live rendering via <code>iframe</code>, and integration of 
-                                CodeMirror for syntax highlighting and editor customization. Implementing PDF generation required 
-                                dynamically bundling and formatting user input while maintaining layout integrity.
+                                the code is instantly compiled and rendered in a live <code>iframe</code> preview pane, mimicking a CodePen-like workflow.
+                                Once typed, you may export all code into a formatted PDF, making it easy to save or share code snippets 
+                                privately. Ideal for quick prototyping or safeguarding personal snippets without relying on cloud storage 
+                                or external platforms.
                             </p>
                         </div>
                         <div class="modal-nav">
                             <a target="_blank" href="https://github.com/JeremyWhervin/code-printer"><p>Source code &lt;/&gt;</p></a>
-                            <a target="_blank" href="#"><p>View live site</p></a>
+                            <a target="_blank" href="https://code-printer.onrender.com"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
@@ -228,22 +224,27 @@
                             <p>
                                 This project is a full-stack cloud storage solution that allows users to securely log in, manage their 
                                 own storage space, and upload files all in a personalized environment. Includes features like: authentication 
-                                of user accounts with secure login via Supabase Auth, user folder creation. Create personal folders 
-                                limited to each authenticated user, user file uploads within folders for organisation, sorting by file 
-                                type based on the allowed file formats.
-                            </p>
-                            <p>
-                                This application required integrating Supabase's authentication, database, and storage APIs while 
-                                managing state and user sessions on the frontend. It involved building user-specific access control, 
-                                setting up database policies to enforce security, and designing a responsive UI for file interactions.
+                                via Supabase Auth, user folder creation, user file uploads and sorting by file type based on the allowed 
+                                file formats.
                             </p>
                             <p>This is built with the free version of Supabase. So only 50 total MB of data is allowed. IF you decide to 
                                 upload something, please make it as small as possible. :)
                             </p>
+                            <span class="creds">
+                                <b>Login Credentials:</b>
+                                <ul>
+                                    <li>
+                                        <p>Username: devtest65@yahoo.com</p>
+                                    </li>
+                                    <li>
+                                        <p>Password: 123456</p>
+                                    </li>
+                                </ul>
+                            </span>
                         </div>
                         <div class="modal-nav">
                             <a target="_blank" href="https://github.com/JeremyWhervin/i-h8-google-drive"><p>Source code &lt;/&gt;</p></a>
-                            <a target="_blank" href="#"><p>View live site</p></a>
+                            <a target="_blank" href="https://i-h8-google-drive.onrender.com"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
@@ -320,9 +321,7 @@
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <!-- <a href="#"><p>Source code &lt;/&gt;</p></a> -->
-                            <a href="#"><p>Request view of live site</p></a>
-                            <!-- <a href="#"><p>Research document</p></a> -->
+                            <p class="disabled">Live site</p>
                         </div>                 
                     </div>
                 </div>
@@ -341,31 +340,27 @@
                         <!-- <img src="../media/images/kin_type.png" alt=""> -->
                     </div>
                     <div class="modal-desc">
-                        <h2>Jamaica Homicide Statistics</h2>
+                        <h2>Seeker Chat</h2>
                         <div class="tidbits">
-                            <p>html</p>
+                            <p>react</p>
+                            <p>node.js</p>
                             <p>css</p>
-                            <p>javascript</p>
-                            <p>json</p>
                         </div>
                         <div class="modal-details">
                             <p>
-                                This interactive web map visualizes homicide statistics across Jamaica, broken down by parish and year 
-                                from 2020 to 2024. Using MapLibre GL JS for smooth, open-source mapping, the site renders a detailed map 
-                                of the island where users can explore crime trends through simple, intuitive interactions. Includes: 
-                                interactive hover tooltips to hover over each parish to instantly view yearly homicide data, year-by-year 
-                                breakdown, accurate, local data based on official figures provided by STATIN (Statistical Institute of 
-                                Jamaica).
+                                Seeker.io is a real-time chat application built with React for the frontend and Socket.io for 
+                                the backend. The app allows users to generate a uuid that acts as a phone number and communicate with users
+                                via their uuid. Users will may contacts and begin conversations with one or multiple contacts. The socket.io
+                                server facilitates the communication between chat rooms and conversation data is stored locally.
                             </p>
                             <p>
-                                The project required sourcing and formatting official crime data, converting geographic shapefiles into 
-                                a usable GeoJSON format, and styling map layers to display information clearly. Building with MapLibre 
-                                involved customizing tooltips, hover states, and responsive map behavior. 
+                                <b>User flow:</b> <br>
+                                Generate ID > Add contact via another existing ID > New conversation with contact > Message.
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <a target="_blank" href="https://github.com/JeremyWhervin/crime-map"><p>Source code &lt;/&gt;</p></a>
-                            <a target="_blank" href="#"><p>View live site</p></a>
+                            <a target="_blank" href="https://github.com/JeremyWhervin/socket-chat"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="https://chat-client-ykj4.onrender.com"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
