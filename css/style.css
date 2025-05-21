@@ -514,6 +514,12 @@ h2 {
     .toggle-on {
         display: block;
     }
+    .left-half {
+        display: block;
+        .info-bit:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
 }
 .abt-img {
     background-image: url('../media/images/wedding-BW.webp');
