@@ -580,7 +580,7 @@ header p {
 .modal-img {
     border-radius: var(--b-rad);
 }
-.node-img, .api-img, .jtc-img, .react-img, .atty-img {
+.node-img, .api-img, .jtc-img, .react-img, .atty-img, .mobileApp-img {
     background-image: url(../media/images/elementor-placeholder-image.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -603,10 +603,10 @@ header p {
     background-position: 50%;
 }
 .node-img {
-    background-image: url(../media/images/printed.webp);
+    background-image: url(../media/images/journal-mobile.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: 50%; */
+    background-position: 50%;
 }
 .atty-img {
     background-image: url(../media/images/chat-display.webp);

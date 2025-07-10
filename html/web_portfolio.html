@@ -142,12 +142,12 @@
                         <div class="project">
                             <div class="project-content">
                                 <button id="node-button">
-                                    <p class="project-name">Code Printer</p>
+                                    <p class="project-name">My Journaling App</p>
                                     <p class="project-desc">Design, development</p>
                                 </button>
                             </div>
                             <div class="thumbnail">
-                                <img class="thumb-img" src="../media/images/code-printer.webp" alt="">   
+                                <img class="thumb-img" src="../media/images/journal-desk.webp" alt="">   
                             </div>   
                         </div>
                         <div class="project">
@@ -160,6 +160,18 @@
                                     <p class="project-desc">Design, development</p>
                                 </button>
                             </div>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-content">
+                                <button id="mobileApp-button">
+                                    <p class="project-name">Coming soon...</p>
+                                    <p class="project-desc">Design, development</p>
+                                </button>
+                            </div>
+                            <div class="thumbnail">
+                                <img class="thumb-img" src="../media/images/elementor-placeholder-image.webp" alt="">   
+                            </div>   
                         </div>  
                 </div>
             </main>
@@ -176,24 +188,25 @@
                         <!-- <img src="#" alt=""> -->
                     </div>
                     <div class="modal-desc">
-                        <h2>CodePrinter</h2>
+                        <h2>Lumin Journal</h2>
                         <div class="tidbits">
-                            <p>react</p>
-                            <p>css</p> 
+                            <p>next.js</p>
+                            <p>typescript</p>
+                            <p>clerk</p>
+                            <p>convex</p>
                         </div>
                         <div class="modal-details">
                             <p>
-                                This application offers a seamless, real-time coding experience entirely in the browser. Built with React 
-                                and powered by CodeMirror, it features separate editor panes for HTML, CSS, and JavaScript. As users type, 
-                                the code is instantly compiled and rendered in a live <code>iframe</code> preview pane, mimicking a CodePen-like workflow.
-                                Once typed, you may export all code into a formatted PDF, making it easy to save or share code snippets 
-                                privately. Ideal for quick prototyping or safeguarding personal snippets without relying on cloud storage 
-                                or external platforms.
+                                Lumin Journal is a real time journal that I built for personal use as my journal. 
+                                Using Next.js, clerk for authentication and convex as a real-time database, 
+                                I incorporated the block-based rich text editor, Blocknote as the medium to write the journal entries. 
+                                I wrote the API endpoints that allow me to create, delete and bookmark my entries, as well as a
+                                mood feature, wherein I can assign a mood to each day and it is reflected in real time on the calendar showing my entries.
                             </p>
                         </div>
                         <div class="modal-nav">
-                            <a target="_blank" href="https://github.com/JeremyWhervin/code-printer"><p>Source code &lt;/&gt;</p></a>
-                            <a target="_blank" href="https://code-printer.onrender.com"><p>View live site</p></a>
+                            <a target="_blank" href="https://github.com/JeremyWhervin/journal"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="https://lumin-journal.vercel.app/"><p>View live site</p></a>
                         </div>                 
                     </div>
                 </div>
@@ -366,6 +379,35 @@
                     </div>
                 </div>
             </dialog>
+            <dialog class="modal" id="mobileApp-dialog">
+                <div class="exit-button">
+                    <button class="close">
+                        <svg  viewBox="0 -960 960 960">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-flex">
+                    <div class="modal-img mobileApp-img">
+                        <!-- <img src="#" alt=""> -->
+                    </div>
+                    <div class="modal-desc">
+                        <h2>Mobile app</h2>
+                        <div class="tidbits">
+                            <p>react native</p>
+                        </div>
+                        <div class="modal-details">
+                            <p>
+                                It's gonna be a mobile app, that i use to help me progress my lifts in the gym
+                            </p>
+                        </div>
+                        <div class="modal-nav">
+                            <a target="_blank" href="https://github.com/JeremyWhervin/journal"><p>Source code &lt;/&gt;</p></a>
+                            <a target="_blank" href="https://lumin-journal.vercel.app/"><p>View live site</p></a>
+                        </div>                 
+                    </div>
+                </div>
+            </dialog>
 
             <script>
                 const firstModal = document.querySelector('#node-dialog');
@@ -373,12 +415,14 @@
                 const thirdModal = document.querySelector('#api-dialog');
                 const fourthModal = document.querySelector('#jtc-dialog');
                 const fifthModal = document.querySelector('#atty-dialog');
+                const sixthModal = document.querySelector('#mobileApp-dialog');
 
                 const openModalOne = document.querySelector('#node-button');
                 const openModalTwo = document.querySelector('#react-button');
                 const openModalThree = document.querySelector('#api-button');
                 const openModalFour = document.querySelector('#jtc-button');
                 const openModalFive = document.querySelector('#atty-button');
+                const openModalSix = document.querySelector('#mobileApp-button');
 
                 const closeModalButtons = document.querySelectorAll('.close');
 
@@ -402,6 +446,10 @@
                     fifthModal.showModal();
                     lenis.stop();
                 });
+                openModalSix.addEventListener('click', () => {
+                    sixthModal.showModal();
+                    lenis.stop();
+                });
 
                 closeModalButtons.forEach(button => {
                     button.addEventListener('click', () => {
@@ -410,6 +458,7 @@
                         thirdModal.close();
                         fourthModal.close();
                         fifthModal.close();
+                        sixthModal.close();
                         lenis.start();
                     });
                 });
